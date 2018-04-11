@@ -1,12 +1,12 @@
-var fs = require('fs');
-var http = require('http');
-var express = require('express');
-var favicon = require('serve-favicon');
-var bodyParser = require('body-parser');
+const fs = require('fs');
+const http = require('http');
+const express = require('express');
+const favicon = require('serve-favicon');
+const bodyParser = require('body-parser');
 
 console.log('Getting started!');
 
-var app = express();
+let app = express();
 app.set('view engine', 'ejs');
 
 app.use('/assets', express.static('assets'));
@@ -16,13 +16,10 @@ app.use(express.json());
 
 
 app.get('/', function(req, res){
-  console.log('Request was made: ' + req.path);
   res.render('index');
 })
 
 app.get('/home', function(req, res){
-  console.log('Request was made: ' + req.path);
-  console.log('Redirecting...');
   res.redirect('/');
 })
 
@@ -31,13 +28,11 @@ app.get('/contact', function(req, res){
 })
 
 app.post('/search', function(req, res){
-  var data = req.body;
-  res.render('search', {data: data});
-
+  res.render('search', {data: req.body});
 })
 
 app.get('*', function(req, res){
-  console.log('Request was made: ' + req.path);
+  console.log('Unhandled request was made: ' + req.path);
   console.log('Sending 404 page...');
   res.render('404');
 })
