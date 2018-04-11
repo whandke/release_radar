@@ -3,11 +3,21 @@
   <head>
     <link href="/assets/styles.css" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,400" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   <body>
     <% include partials/nav.ejs %>
+
+
       <h1>Release Radar</h1>
       <p>Best site to keep track of game releases!</p>
+
+      <div class="search-container">
+        <form action="/search" method="post">
+          <input type="text" placeholder="Search.." name="search">
+        </form>
+      </div>
+
     <% include partials/footer.ejs %>
   </body>
 

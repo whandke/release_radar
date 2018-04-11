@@ -2,6 +2,9 @@ body{background: #E05030; font-family: 'Roboto', 'sans-serif'; color: #FFFFFF; p
 h1{font-size: 100px; font-weight: 300; text-transform: uppercase; letter-spacing: 2px; text-align: center;}
 p{font-size: 16px; font-weight: 400; text-align: center;}
 
+/*
+BREADCRUMB NAV
+*/
 ul.breadcrumb {
     padding: 10px 16px;
     list-style: none;
@@ -9,28 +12,28 @@ ul.breadcrumb {
     color: #FFFFFF;
 }
 
-/* Display list items side by side */
 ul.breadcrumb li {
     display: inline;
     font-size: 18px;
 }
 
-/* Add a slash symbol (/) before/behind each list item */
 ul.breadcrumb li+li:before {
     padding: 8px;
     content: "/\00a0";
 }
 
-/* Add a color to all links inside the list */
 ul.breadcrumb li a {
     text-decoration: none;
     color: #FFFFFF;
 }
 
-/* Add a color on mouse-over */
 ul.breadcrumb li a:hover {
     text-decoration: underline;
 }
+
+/*
+FOOTER
+*/
 
 .footer {
     position: fixed;
@@ -41,4 +44,23 @@ ul.breadcrumb li a:hover {
     color: white;
     text-align: center;
     font-size: 10px;
+}
+
+/*
+SEARCH CONTAINER
+*/
+
+.search-container {
+  max-width: 50%;
+  width: 1000px;
+}
+
+input[type=text] {
+  width: 100%;
+  padding: 8px;
+  font-size: 30px;
+  font-weight: 200;
+  font-family: 'Roboto', 'sans-serif';
+  border: none;
+  box-sizing: border-box;
 }
