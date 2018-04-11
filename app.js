@@ -6,6 +6,7 @@ console.log('Getting started!');
 
 var app = express();
 app.set('view engine', 'ejs');
+
 app.use('/assets', express.static('assets'));
 
 
@@ -18,6 +19,10 @@ app.get('/home', function(req, res){
   console.log('Request was made: ' + req.path)
   console.log('Redirecting...');
   res.redirect('/');
+})
+
+app.get('/contact', function(req, res){
+  res.render('contact');
 })
 
 app.get('*', function(req, res){
