@@ -16,7 +16,7 @@ app.get('/', function(req, res){
 })
 
 app.get('/home', function(req, res){
-  console.log('Request was made: ' + req.path)
+  console.log('Request was made: ' + req.path);
   console.log('Redirecting...');
   res.redirect('/');
 })
@@ -26,8 +26,8 @@ app.get('/contact', function(req, res){
 })
 
 app.get('*', function(req, res){
-  console.log('Request was made: ' + req.path)
-  console.log('Sending 404 page...')
+  console.log('Request was made: ' + req.path);
+  console.log('Sending 404 page...');
   res.render('404');
 })
 
