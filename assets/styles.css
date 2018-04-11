@@ -53,6 +53,7 @@ SEARCH CONTAINER
 .search-container {
   max-width: 50%;
   width: 1000px;
+  margin: 100px auto;
 }
 
 input[type=text] {
