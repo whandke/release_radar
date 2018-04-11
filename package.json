@@ -1,0 +1,22 @@
+{
+  "name": "radar",
+  "version": "0.1.0",
+  "description": "Server for Release Radar website",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "games",
+    "release",
+    "radar",
+    "application",
+    "website"
+  ],
+  "author": "whandke",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^2.5.8",
+    "express": "^4.16.3"
+  }
+}
