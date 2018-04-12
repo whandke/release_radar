@@ -15,6 +15,10 @@ module.exports = function(app){
     app.post('/search', function(req, res){
         res.render('search', {data: req.body});
       })
+
+    app.get('/about', function(req, res){
+      res.render('about');
+    })
       
     app.get('*', function(req, res){
         console.log('Unhandled request was made: ' + req.path);
