@@ -2,7 +2,6 @@ const fs = require('fs');
 const http = require('http');
 const express = require('express');
 const favicon = require('serve-favicon');
-const bodyParser = require('body-parser');
 const radarController = require('./controllers/radarController');
 
 console.log('Getting started!');
@@ -15,9 +14,7 @@ app.set('view engine', 'ejs');
 //Static files
 app.use(express.static('public'));
 
-//JSON and URLencoded
 app.use(express.urlencoded({extended: true}));
-app.use(express.json());
 
 //Fire up controllers
 radarController(app);
