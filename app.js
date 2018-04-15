@@ -8,14 +8,20 @@ const radarController = require('./controllers/radarController');
 console.log('Getting started!');
 
 let app = express();
+
+//Set up rendering engine
 app.set('view engine', 'ejs');
 
-app.use('/assets', express.static('assets'));
-app.use(favicon(__dirname + '/favicon.ico'));
+//Static files
+app.use(express.static('public'));
+
+//JSON and URLencoded
 app.use(express.urlencoded({extended: true}));
 app.use(express.json());
 
+//Fire up controllers
 radarController(app);
 
+//Listen to port
 app.listen(3000);
 console.log('Now listening on port 3000!');
