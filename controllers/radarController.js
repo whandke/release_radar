@@ -1,7 +1,15 @@
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
+const fs = require('fs');
 
-mongoose.connect('mongodb://app:test@ds129926.mlab.com:29926/radar');
+let keys = JSON.parse(fs.readFileSync(__dirname + '/../keys.json', 'utf8'));
+
+mongoose.connect(`mongodb://${keys.mlab.test.user}:${keys.mlab.test.password}@ds129926.mlab.com:29926/radar`, function(err){
+  if(err) {
+    console.log('Coś poszło nie tak przy połączeniu :c');
+    throw err;
+  }
+})
 
 let gameSchema = new mongoose.Schema({
   title: String,
