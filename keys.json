@@ -1,0 +1,8 @@
+{
+    "mlab": {
+        "test": {
+            "user": "app",
+            "password": "test"
+        }
+    }
+}
