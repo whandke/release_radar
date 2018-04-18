@@ -10,6 +10,7 @@ let app = express();
 
 //Set up rendering engine
 app.set('view engine', 'ejs');
+app.set('port', (process.env.PORT || 3000));
 
 //Static files
 app.use(express.static('public'));
@@ -20,5 +21,6 @@ app.use(express.urlencoded({extended: true}));
 radarController(app);
 
 //Listen to port
-app.listen(process.env.port || 3000);
-console.log('Now listening on port 3000!');
+app.listen(app.get('port'), function(){
+    console.log(`Now listening on port ${app.get('port')}!`);
+});
